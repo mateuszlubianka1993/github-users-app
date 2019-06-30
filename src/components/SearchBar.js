@@ -1,18 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {inputValue} from '../actions';
+import {inputValue, getUser} from '../actions';
 
 class SearchBar extends React.Component {
     
     render() {
         const { iValue } = this.props;
+        
         return(
             <div className="container">
-                <form>
+                <form onSubmit={(e)=>this.props.getUser(e, iValue)}>
                     <div className="input-group mb-3 input-group-lg">
                         <input onChange={(e)=>this.props.inputValue(e.target.value)} type="text" className="form-control" placeholder="Search GitHub User" aria-label="Search GitHub User" aria-describedby="button-addon2"/>
                         <div className="input-group-append">
-                            <button type="button" className="btn btn-outline-success btn-lg">Search</button>
+                            <button type="submit" className="btn btn-outline-success btn-lg">Search</button>
                         </div>
                     </div>
                 </form>
@@ -22,8 +23,8 @@ class SearchBar extends React.Component {
 }
 const mapStateToProps = (state) => {
     return {
-      iValue: state.input
+      iValue: state.input,
     };
   };
 
-export default connect(mapStateToProps, {inputValue}) (SearchBar);
+export default connect(mapStateToProps, {inputValue, getUser}) (SearchBar);
