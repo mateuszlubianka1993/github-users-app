@@ -1,0 +1,38 @@
+.user-container {
+    background-color: #60AEDE;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-size: 22px;
+}
+.card-box {
+    width: 40%;
+    padding: 10px;
+    border: 5px solid #336365;
+    background-color: #F9C6B3;
+}
+.card-btn {
+    background-color: #60AEDE;
+}
+.card-btn:hover {
+    background-color: #40ADCD;
+}
+.card-box h5 {
+    color: #336365;
+    text-align: center;
+    padding: 5px;
+    font-size: 36px;
+}
+.card-img {
+    border-radius: 50%;
+    width: 60%;
+    border: 5px solid #336365;
+    margin-left: auto;
+    margin-right: auto;
+}
+.description-box {
+    padding: 10px;
+}
+.description-box li {
+    background-color: #F9C6B3;
+}
