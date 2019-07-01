@@ -8,7 +8,7 @@ export const inputValue = (data) => {
 };
 
 export const getUser = (e, iValue) => async dispatch  => {
-    e.preventDefault();
+    if(e) {e.preventDefault();}
     
     const response = await githubApi.get(`/users/${iValue}`);
     dispatch({

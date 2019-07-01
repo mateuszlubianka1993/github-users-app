@@ -4,6 +4,9 @@ import {inputValue, getUser} from '../actions';
 import './styles/SearchBar.css';
 
 class SearchBar extends React.Component {
+    componentDidMount() {
+        this.props.getUser(null,'mateuszlubianka1993');
+    };
     
     render() {
         const { iValue } = this.props;
