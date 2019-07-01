@@ -13,7 +13,7 @@ class UserDisplay extends React.Component {
                     <img src={user.avatar_url} className="card-img-top card-img" alt="avatar"/>
                     <div className="card-body">
                         <h5 className="card-title">{user.login}</h5>
-                        <h6>{user.created_at}</h6>
+                        <h6 className="user-date">{user.created_at}</h6>
                         <ul className="list-group list-group-flush description-box">
                             <li className="list-group-item">Followers: {user.followers}</li>
                             <li className="list-group-item">Following: {user.following}</li>

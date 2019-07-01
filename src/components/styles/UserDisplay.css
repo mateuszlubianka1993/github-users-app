@@ -17,6 +17,9 @@
 .card-btn:hover {
     background-color: #40ADCD;
 }
+.user-date {
+    letter-spacing: 2px;
+}
 .card-box h5 {
     color: #336365;
     text-align: center;
